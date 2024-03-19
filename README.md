@@ -13,6 +13,12 @@ pnpm dev
 # or
 bun dev
 ```
+Install more packages for this project:
+npm i
+npm install @tanstack/react-table
+npm install json-as-xlsx
+npm install next-themes
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
