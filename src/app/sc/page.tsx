@@ -1,18 +1,16 @@
-import React from 'react'
-import { DataTable } from './data-table'
-import {columns} from './columns'
-import { sc_brand } from '@/sc'
+import React from "react";
+import { DataTable } from "./data-table";
+import { columns } from "./columns";
+import { sc_brand } from "@/sc";
 
-interface Props {
-    
-}
+type Props = {};
 
 const People = (props: Props) => {
-    return (
-        <div className="container py-10 mx-auto">
-        <DataTable columns={columns} data={sc_brand}/>
-        </div>
-    )
-}
+  return (
+    <div className="container py-10 mx-auto">
+      <DataTable columns={columns} data={sc_brand} />
+    </div>
+  );
+};
 
-export default People
+export default People;
