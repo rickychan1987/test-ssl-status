@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -14,7 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function SelectBrand() {
-  const [position, setPosition] = React.useState("bottom");
+  const router = useRouter();
 
   return (
     <DropdownMenu>
@@ -24,9 +25,21 @@ export function SelectBrand() {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Brand :</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioItem value="top">SC</DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="top">LV</DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="top">C7</DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top" onClick={() => router.push("/")}>
+          Home
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top" onClick={() => router.push("/lv")}>
+          lv
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top" onClick={() => router.push("/sc")}>
+          sc
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top" onClick={() => router.push("/tz")}>
+          tz
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="top" onClick={() => router.push("/c7")}>
+          c7
+        </DropdownMenuRadioItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
